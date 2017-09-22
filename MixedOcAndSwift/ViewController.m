@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MixedOcAndSwift-Swift.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    Channel * channel = [[Channel alloc]init];
+    NSString * name = [channel testChannelWithName:@"abner"];
+    
+    NSLog(@"====abner=====%@",name);
 }
 
 

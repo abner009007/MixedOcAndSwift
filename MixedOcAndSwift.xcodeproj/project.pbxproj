@@ -15,6 +15,7 @@
 		D9CF84511F74DEE2004A1845 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CF84501F74DEE2004A1845 /* main.m */; };
 		D9CF845B1F74DEE2004A1845 /* MixedOcAndSwiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CF845A1F74DEE2004A1845 /* MixedOcAndSwiftTests.m */; };
 		D9CF84661F74DEE2004A1845 /* MixedOcAndSwiftUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CF84651F74DEE2004A1845 /* MixedOcAndSwiftUITests.m */; };
+		D9CF84751F74DF05004A1845 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CF84741F74DF05004A1845 /* Channel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		D9CF84611F74DEE2004A1845 /* MixedOcAndSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MixedOcAndSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9CF84651F74DEE2004A1845 /* MixedOcAndSwiftUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MixedOcAndSwiftUITests.m; sourceTree = "<group>"; };
 		D9CF84671F74DEE2004A1845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9CF84731F74DF05004A1845 /* MixedOcAndSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MixedOcAndSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		D9CF84741F74DF05004A1845 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +108,13 @@
 				D9CF84421F74DEE2004A1845 /* AppDelegate.m */,
 				D9CF84441F74DEE2004A1845 /* ViewController.h */,
 				D9CF84451F74DEE2004A1845 /* ViewController.m */,
+				D9CF84741F74DF05004A1845 /* Channel.swift */,
 				D9CF84471F74DEE2004A1845 /* Main.storyboard */,
 				D9CF844A1F74DEE2004A1845 /* Assets.xcassets */,
 				D9CF844C1F74DEE2004A1845 /* LaunchScreen.storyboard */,
 				D9CF844F1F74DEE2004A1845 /* Info.plist */,
 				D9CF84501F74DEE2004A1845 /* main.m */,
+				D9CF84731F74DF05004A1845 /* MixedOcAndSwift-Bridging-Header.h */,
 			);
 			path = MixedOcAndSwift;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 				TargetAttributes = {
 					D9CF843D1F74DEE2004A1845 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					D9CF84551F74DEE2004A1845 = {
@@ -266,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9CF84461F74DEE2004A1845 /* ViewController.m in Sources */,
+				D9CF84751F74DF05004A1845 /* Channel.swift in Sources */,
 				D9CF84511F74DEE2004A1845 /* main.m in Sources */,
 				D9CF84431F74DEE2004A1845 /* AppDelegate.m in Sources */,
 			);
@@ -430,11 +437,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FRX25KEXK8;
 				INFOPLIST_FILE = MixedOcAndSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = abner.MixedOcAndSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MixedOcAndSwift/MixedOcAndSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -443,11 +456,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FRX25KEXK8;
 				INFOPLIST_FILE = MixedOcAndSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = abner.MixedOcAndSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MixedOcAndSwift/MixedOcAndSwift-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -455,6 +473,7 @@
 		D9CF846E1F74DEE2004A1845 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MixedOcAndSwiftTests/Info.plist;
@@ -469,6 +488,7 @@
 		D9CF846F1F74DEE2004A1845 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MixedOcAndSwiftTests/Info.plist;
@@ -483,6 +503,7 @@
 		D9CF84711F74DEE2004A1845 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MixedOcAndSwiftUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -496,6 +517,7 @@
 		D9CF84721F74DEE2004A1845 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MixedOcAndSwiftUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
